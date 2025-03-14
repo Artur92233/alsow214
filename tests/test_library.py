@@ -7,7 +7,6 @@ class TestLibrary:
         library.remove_book(book.inn)
         assert book not in library.books
 
-
-    def test_get_books(self, library, book ):
+    def test_get_books(self, library, book):
         library.add_book(book)
         assert book in library.books

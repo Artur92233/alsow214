@@ -2,7 +2,11 @@ import uuid
 
 
 class Book:
-    def __init__(self, author: str, title: str, ):
+    def __init__(
+        self,
+        author: str,
+        title: str,
+    ):
         self.author = author
         self.title = title
         self.inn: str = uuid.uuid4().hex
