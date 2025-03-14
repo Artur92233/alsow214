@@ -5,7 +5,7 @@ test:
 
 
 PHONY: check
-check:
+check: test
 	black .
 	isort .
 	flake8 .
