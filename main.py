@@ -1,7 +1,13 @@
-from nname import name
+import sys
+import time
+
+print(sys.argv)
+arguments = sys.argv
+seconds = int(arguments[1])
+print(seconds)
 
 
-def ask_surname(surname: str) -> str:
-    full_name = f"Hello, {name} {surname}"
-    print(full_name)
-    return full_name
+
+for i in range(seconds):
+    print(i)
+    time.sleep(1)
