@@ -8,10 +8,18 @@ r = redis.Redis(
     password="nbJcWDD2YVC3AAoomZE7jOCRbVIb9dLz",
 )
 
-success = r.set('foo', 'bar')
-# True
 
-result = r.get('foo')
-print(result)
-# >>> bar
+
+r.set('favouriteCar', 'ToyotaCorolla')
+
+r.set('myPet', 'Monya' , ex=7200)
+
+r.rpush('productsList', 'cheese', 'bacon' , 'milk' , 'banana')
+r.expire('productsList' , 604800)
+
+r.hset('ingrudients', mapping={'flour': 250, 'milk': 500 , 'eggs': 3 , 'salt': 5})
+r.hset('ingrudients', mapping={'sugar': 300})
+r.hset('ingrudients', mapping={'sugar': 500})
+r.delete('ingrudients')
+
 
